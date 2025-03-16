@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion";
+import { SignUpButton } from "@clerk/nextjs";
 
 export default function HomePage() {
   const fadeIn = {
@@ -49,7 +50,11 @@ export default function HomePage() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4, duration: 0.5 }}
         >
-          <Button size="lg">Get Started</Button>
+          <SignUpButton mode="modal">
+            <Button size="lg" variant="default" className="font-medium">
+              Get Started
+            </Button>
+          </SignUpButton>
           <Button variant="outline" size="lg">
             Explore Portfolios
           </Button>
@@ -171,7 +176,11 @@ export default function HomePage() {
           Start building your AI-powered developer portfolio now.
         </p>
         <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-          <Button size="lg">Get Started</Button>
+          <SignUpButton mode="modal">
+            <Button size="lg" variant="default" className="font-medium">
+              Get Started
+            </Button>
+          </SignUpButton>
         </motion.div>
       </motion.section>
     </div>
